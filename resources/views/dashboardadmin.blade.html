@@ -1,9 +1,6 @@
 @extends('layouts.app', ['activePage' => 'dashboard', 'title' => 'Leadbox Management System', 'navName' => 'Dashboard', 'activeButton' => 'laravel'])
 
 @section('content')
-<style>
-    .blue {background: mediumblue; color:beige;}
-    </style>
 
     <div class="container mt-4">
         @if(!ENABLE_MAILER)
@@ -23,7 +20,7 @@
             <div class="col-12 col-md-4">
                 <div class="card text-center" style="box-shadow: 0 0 5px #555;">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item blue"><h3> Today's Stats</h3>
+                        <li class="list-group-item active"><h3> Today's Stats</h3>
                             <p class="lead">This resets every 24 hours</p>
                         </li>
                         <li class="list-group-item">Emails Received: <span id="emails-sent">{{$leadMails['total24h']}}</span></li>
@@ -36,7 +33,7 @@
             <div class="col-12 col-md-4">
                 <div class="card text-center" style="box-shadow: 0 0 5px #555;">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item blue"><h3> Take a lead.</h3>
+                        <li class="list-group-item active"><h3> Request a lead.</h3>
                             <p class="lead">Receive a lead in your inbox</p>
                         </li>
 
@@ -49,36 +46,7 @@
                                     Receive A Lead
                                 </a>
                             </div>
-                            <div class="btn-group dropright">
-                               
-                                <button style="padding: 0 14px;" type="button"
-                                        class="btn btn-primary btn-sm dropdown-toggle-split" data-toggle="dropdown"
-                                        aria-expanded="false" mtitle="Show Email Tips">
-                                    <span style="font-size: 14px; "
-                                          class="text-dark font-weight-lighter font-italic">Email
-                                        Rules</span>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <div class="emailRules p-2">
-                                        <h4>Spam emails:</h4>
-                                        <p class="lead">Just hit reply and in the body make sure the first
-                                            word is
-                                            spam followed by the message as to why it is spam.</p>
-                                        <p class="lead">Example:<br>
-                                            spam <em>&nbsp;This is advertising.</em></p>
-
-                                        <h4>Send to another Agent:</h4>
-                                        <p class="lead">If you receive a lead that belongs to someone else,
-                                            hit reply
-                                            and in the body type their email followed by the exclamation mark(!).
-                                            followed by
-                                            reason or comment.</p>
-                                        <p class="lead">Example:<br>
-                                            agent2@cruisertravels.com! <em>&nbsp;your comment or the reason here.</em>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            
                 </div>
                 </li>
 
@@ -89,7 +57,7 @@
             <div class="col-12 col-md-4">
                 <div class="card text-center" style="box-shadow: 0 0 5px #555;">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item blue"> <h3> Total Stats</h3>
+                <li class="list-group-item active"> <h3> Total Stats</h3>
               <p class="lead">This shows the total stats.</p>
                 </li>
                 <li class="list-group-item">Emails Received: <span id="emails-sent">{{$leadMails['total']}}</span></li>
@@ -127,6 +95,39 @@
                                 </tfoot>
                             </table>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-group dropright">
+                <button type="button" id="generateLeadBtn" class="btn btn-primary btn-lg dropright"
+                        onclick="lead()" title="Click here to send a lead to your inbox.">
+                    Request A Lead
+                </button>
+                <button style="padding: 0 14px;" type="button"
+                        class="btn btn-primary btn-sm dropdown-toggle-split" data-toggle="dropdown"
+                        aria-expanded="false" mtitle="Show Email Tips">
+                    <span style="font-size: 14px; "
+                          class="text-dark font-weight-lighter font-italic">Email
+                        Rules</span>
+                </button>
+                <div class="dropdown-menu">
+                    <div class="emailRules p-2">
+                        <h4>Spam emails:</h4>
+                        <p class="lead">Just hit reply and in the body make sure the first
+                            word is
+                            spam followed by the message as to why it is spam.</p>
+                        <p class="lead">Example:<br>
+                            spam <em>&nbsp;This is advertising.</em></p>
+
+                        <h4>Send to another Agent:</h4>
+                        <p class="lead">If you receive a lead that belongs to someone else,
+                            hit reply
+                            and in the body type their email followed by the exclamation mark(!).
+                            followed by
+                            reason or comment.</p>
+                        <p class="lead">Example:<br>
+                            agent2@cruisertravels.com! <em>&nbsp;your comment or the reason here.</em>
+                        </p>
                     </div>
                 </div>
             </div>

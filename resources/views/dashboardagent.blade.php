@@ -20,7 +20,7 @@
                 scrollbar-width: none;
                 /* Firefox */
             }
-
+            
         </style>
         <div class="agent">
             <div class="jumbotron bg-transparent">

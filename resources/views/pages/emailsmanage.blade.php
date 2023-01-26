@@ -275,7 +275,7 @@
                                 </div>
                                 <div class="tab-pane" id="reassigned" role="tabpanel" aria-labelledby="settings-tab">
                                     <div id="reassigned">
-                                        <table class="table table-bordered table-striped" id="lead-table4" style="width:100%">
+                                        <table class="table table-bordered table-striped table-responsive" id="lead-table4" style="width:100%">
                                             <thead style="text-align: center; padding: 5px 10px; position: sticky; top: 0; z-index: 99; background-color:aqua; font-weight: bold;">
                                             <th>#</th>
                                             <th>Sender</th>

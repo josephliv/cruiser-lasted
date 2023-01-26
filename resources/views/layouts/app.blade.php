@@ -125,6 +125,27 @@
             "pageLength": 100,
             "stateSave": true,
             "stateDuration": -1,
+
+            "columnDefs": [
+                { "width": "10%"},
+                { "width": "10%"},
+                { "width": "20%"},
+                { "width": "20%"},
+                { "width": "10%"},
+                { "width": "10%"},
+                { "width": "20%"},
+            ],
+            // columnDefs: [
+            //     null,
+            //     null,
+            //     null,
+            //     null,
+            //     null,
+            //     null,
+            //     null,
+            // ],
+            // fixedColumns: true
+
         });
     });
 </script>

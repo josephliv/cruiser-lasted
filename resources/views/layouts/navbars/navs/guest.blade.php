@@ -1,5 +1,5 @@
 <nav class="navbar navbar-transparent">
-
+   
 <div class="container top">
         <div class="nav-item">
             <a href="/" class="logo">
@@ -12,4 +12,4 @@
             </a>
         </div>
 </div>
-</nav>
+</nav> 
